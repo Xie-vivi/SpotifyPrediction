@@ -19,4 +19,3 @@ class Csv:
     def clearCsv(self, fileName):
         f = open(fileName, 'w')
         f.truncate(0)
-

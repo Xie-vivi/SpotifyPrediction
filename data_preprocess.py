@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
+
 class DataPreprocess:
 
     def __init__(self, ds):
@@ -73,7 +74,8 @@ class DataPreprocess:
 
     # convert release_date into int
     def convertReleaseDate(self):
-        self.ds['release_date'] = pd.to_datetime(self.ds['release_date']).apply(lambda x: x.value)
+        self.ds['release_date'] = pd.to_datetime(self.ds['release_date'],format = '%Y-%m-%d')
+        self.ds['release_date'] = self.ds['release_date'].dt.year
 
     # preprocess the dataset and return the data
     def preprocessDs(self, isTrainingDatas):

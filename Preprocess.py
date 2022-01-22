@@ -70,6 +70,6 @@ class Preprocess:
 
     def corr(self):
         corr = self.ds.corr()
-        f, ax = plt.subplots(figsize=(10, 6))
+        f, ax = plt.subplots(figsize=(12, 8))
         hm = sns.heatmap(round(corr, 2), annot=True, ax=ax, cmap="coolwarm")
         plt.show()

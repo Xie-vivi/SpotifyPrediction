@@ -21,7 +21,8 @@ Clf = Classifiers(X_train, y_train)
 
 preprocessTest.PreprocessDs(False)
 testDs = preprocessTest.getDs()
-preprocess.frequency(testDs)
+# preprocess.frequency(testDs)
+# preprocess.corr()
 
 #decisionTree
 Clf.decisionTree(X_test, y_test)
